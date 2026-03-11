@@ -76,6 +76,20 @@ threat_categories:
         event.ip_info == 'crowdsecurity/http-admin-interface-probing'
         event.ip_info == 'crowdsecurity/http-probing'
         event.ip_info == 'crowdsecurity/http-sensitive-files'
+        event.description == 'echelon_admin_panel_hunt'
+        event.description == 'echelon_cgi_script_hunt'
+        event.description == 'echelon_cms_enumeration'
+        event.description == 'echelon_config_file_hunt'
+        event.description == 'echelon_database_admin_hunt'
+        event.description == 'echelon_enterprise_software_probe'
+        event.description == 'echelon_port_scan'
+        event.description == 'echelon_sip_register_scanner' -> {'port': [5060]}
+        event.description == 'echelon_sharepoint_webshell_scanning'
+        event.description == 'echelon_solarwinds_probe'
+        event.description == 'echelon_tls_ssl_crawler'
+        event.description == 'echelon_web_crawler'
+        event.description == 'echelon_web_shell_hunt'
+        event.description == 'echelon_wordpress_enumeration'
 
   login:
     role: src
@@ -116,6 +130,11 @@ threat_categories:
         event.description == 'blocklist_de-bruteforcelogin'
         event.ip_info == 'crowdsecurity/http-generic-bf' -> {'protocol': ['http']}
         event.ip_info.startswith('crowdsecurity/ssh-') -> {'protocol': ['ssh']}
+        event.description == 'echelon_ssh_bruteforcer' -> {'protocol': ['ssh'], 'port': ['22', '2222']}
+        event.description == 'echelon_ssh_connection_attempt' -> {'protocol': ['ssh'], 'port': ['22', '2222']}
+        event.description == 'echelon_telnet_bruteforcer' -> {'protocol': ['telnet'], 'port': ['23', '2323']}
+        event.description == 'echelon_telnet_login_attempt' -> {'protocol': ['telnet'], 'port': ['23', '2323']}
+        event.description == 'echelon_vnc_login_attempt' -> {'protocol': ['vnc'], 'port': ['5900', '5901']}
 
   ddos:
     role: src
@@ -245,6 +264,9 @@ threat_categories:
         any([bool(re.findall(r'(?i)botnet', tag)) for tag in event.tags])
       blacklists: |-
         event.description == 'mirai_tracker_ips' -> {'malware_family': ['elf.mirai']}
+        event.description == 'echelon_iot_default_credential_attempt'
+        event.description == 'echelon_mirai_scanner' -> {'malware_family': ['elf.mirai']}
+        event.description == 'echelon_mirai_credential_spray' -> {'malware_family': ['elf.mirai']}
 
   phishing_site:
     role: dst
@@ -287,3 +309,16 @@ threat_categories:
         event.ip_info == 'http-sqli-probing' -> {'protocol': ['http']}
         event.ip_info == 'http-xss-probing' -> {'protocol': ['http']}
         event.ip_info == 'http-backdoors-attempts' -> {'protocol': ['http']}
+        event.description == 'echelon_cisco_ucm_exploit'
+        event.description == 'echelon_directory_traversal_attempt' -> {'protocol': ['http']}
+        event.description == 'echelon_file_upload_attempt'
+        event.description == 'echelon_path_traversal_attempt' -> {'protocol': ['http']}
+        event.description == 'echelon_router_exploit'
+        event.description == 'echelon_sql_injection_attempt' -> {'protocol': ['http']}
+        event.description == 'echelon_sharepoint_active_exploitation' -> {'protocol': ['http']}
+        event.description == 'echelon_sharepoint_toolshell_exploit' -> {'protocol': ['http']}
+        event.description == 'echelon_uri_parsing_exploit' -> {'protocol': ['http']}
+        event.description == 'echelon_web_command_injection' -> {'protocol': ['http']}
+        event.description == 'echelon_web_vulnerability_exploit' -> {'protocol': ['http']}
+        event.description == 'echelon_wordpress_auth_bypass' -> {'protocol': ['http']}
+        event.description == 'echelon_ivanti_epmm_exploit'

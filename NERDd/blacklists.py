@@ -74,7 +74,10 @@ def parse_bl_with_regex(bl_data, cregex):
         for line in bl_data.split('\n'):
             match = cregex.search(line)
             if match:
-                ip = str(ipaddress.IPv4Address(match.group(1)))
+                try:
+                    ip = str(ipaddress.IPv4Address(match.group(1)))
+                except ipaddress.AddressValueError:
+                    continue
                 ip_info = match.group(2) if cregex.groups > 1 else None
                 bl_records.append((ip, ip_info))
     return bl_records

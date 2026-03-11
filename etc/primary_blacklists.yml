@@ -516,7 +516,348 @@ iplists:
   time:
     hour: 11
     minute: 30
-  
+
+# Echelon blacklists
+- id: echelon_admin_panel_hunt
+  name: Echelon admin panel hunt
+  descr: Scanning for administrative interfaces
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/admin-panel-hunt
+  regex: ""
+  time:
+    hour: "11"
+    minute: 05
+
+- id: echelon_cgi_script_hunt
+  name: Echelon CGI script hunt
+  descr: Scanning for vulnerable CGI scripts
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/cgi-script-hunt
+  regex: ""
+  time:
+    hour: "11"
+    minute: 05
+
+- id: echelon_cms_enumeration
+  name: Echelon CMS enumeration
+  descr: Content management system discovery and enumeration
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/cms-enumeration
+  regex: ""
+  time:
+    hour: "11"
+    minute: 05
+
+- id: echelon_cisco_ucm_exploit
+  name: Echelon CISCO UCM exploit
+  descr: CVE-2024-20253 Cisco Unified Communications Manager RCE
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/cisco-ucm-exploit
+  regex: ""
+  time:
+    hour: "11"
+    minute: 10
+
+- id: echelon_config_file_hunt
+  name: Echelon config file hunt
+  descr: Scanning for exposed configuration files
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/config-file-hunt
+  regex: ""
+  time:
+    hour: "11"
+    minute: 10
+
+- id: echelon_database_admin_hunt
+  name: Echelon database admin hunt
+  descr: Scanning for database admin interfaces (phpMyAdmin, etc.)
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/database-admin-hunt
+  regex: ""
+  time:
+    hour: "11"
+    minute: 10
+
+- id: echelon_directory_traversal_attempt
+  name: Echelon directory traversal
+  descr: Path traversal attack attempting to access restricted files
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/directory-traversal-attempt
+  regex: ""
+  time:
+    hour: "11"
+    minute: 15
+
+- id: echelon_enterprise_software_probe
+  name: Echelon enterprise software probe
+  descr: Probing for enterprise software (Confluence, Jenkins, etc.)
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/enterprise-software-probe
+  regex: ""
+  time:
+    hour: "11"
+    minute: 15
+
+- id: echelon_file_upload_attempt
+  name: Echelon file upload
+  descr: Attempting to upload potentially malicious files
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/file-upload-attempt
+  regex: ""
+  time:
+    hour: "11"
+    minute: 15
+
+- id: echelon_iot_default_credential_attempt
+  name: Echelon IoT default credentials
+  descr:
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/iot-default-credential-attempt
+  regex: ""
+  time:
+    hour: "11"
+    minute: 20
+
+- id: echelon_invanti_epmm_exploit
+  name: Echelon Ivanti EPMM exploit
+  descr: CVE-2026-1281/CVE-2026-1340 Ivanti Endpoint Manager Mobile pre-auth RCE
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/ivanti-epmm-exploit
+  regex: ""
+  time:
+    hour: "11"
+    minute: 20
+
+- id: echelon_mirai_credential_spray
+  name: Echelon Mirai credential spray
+  descr: Mirai-specific IoT default credentials detected in telnet payload
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/mirai-default-credential-spray
+  regex: ""
+  time:
+    hour: "11"
+    minute: 20
+
+- id: echelon_mirai_scanner
+  name: Echelon Mirai scanner
+  descr: Mirai-style port 23/2323 dual scanning pattern detected
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/mirai-scanner
+  regex: ""
+  time:
+    hour: "11"
+    minute: 25
+
+- id: echelon_path_traversal_attempt
+  name: Echelon path traversal
+  descr: Path traversal via encoded sequences
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/path-traversal-attempt
+  regex: ""
+  time:
+    hour: "11"
+    minute: 25
+
+- id: echelon_port_scan
+  name: Echelon port scan
+  descr: Scanning 5+ ports on target host
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/port-scan
+  regex: ""
+  time:
+    hour: "11"
+    minute: 25
+
+- id: echelon_router_exploit
+  name: Echelon router exploit
+  descr: Attempting router firmware exploits (Netgear, D-Link, etc.)
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/router-exploit
+  regex: ""
+  time:
+    hour: "11"
+    minute: 30
+
+- id: echelon_sip_register_scanner
+  name: Echelon SIP register scanner
+  descr: SIP VoIP registration scanning on port 5060
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/sip-register-scanner
+  regex: ""
+  time:
+    hour: "11"
+    minute: 30
+
+- id: echelon_sql_injection_attempt
+  name: Echelon SQL injection
+  descr:
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/sql-injection-attempt
+  regex: ""
+  time:
+    hour: "11"
+    minute: 30
+
+- id: echelon_ssh_bruteforcer
+  name: Echelon SSH bruteforce
+  descr: Multiple SSH authentication attempts detected
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/ssh-bruteforcer
+  regex: ""
+  time:
+    hour: "11"
+    minute: 35
+
+- id: echelon_ssh_connection_attempt
+  name: Echelon SSH connection attempt
+  descr: SSH connection attempt detected on port 22 or 2222
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/ssh-connection-attempt
+  regex: ""
+  time:
+    hour: "11"
+    minute: 35
+
+- id: echelon_sharepoint_active_exploitation
+  name: Echelon SharePoint active exploitation
+  descr: Active exploitation of SharePoint vulnerabilities
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/sharepoint-active-exploitation
+  regex: ""
+  time:
+    hour: "11"
+    minute: 35
+
+- id: echelon_sharepoint_toolshell_exploit
+  name: Echelon SharePoint toolshell exploit
+  descr: SharePoint toolshell exploitation attempt
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/sharepoint-toolshell-exploit
+  regex: ""
+  time:
+    hour: "11"
+    minute: 40
+
+- id: echelon_sharepoint_wehshell_scanning
+  name: Echelon SharePoint webshell scanning
+  descr: Scanning for SharePoint web shells
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/sharepoints-webshell-scanning
+  regex: ""
+  time:
+    hour: "11"
+    minute: 40
+
+- id: echelon_solarwinds_probe
+  name: Echelon SolarWinds probe
+  descr: Probing for SolarWinds Orion endpoints
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/solarwinds-probe
+  regex: ""
+  time:
+    hour: "11"
+    minute: 40
+
+- id: echelon_tls_ssl_crawler
+  name: Echelon TLS/SSL crawler
+  descr: TLS/SSL connection fingerprinting detected via Suricata
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/tls%2Fssl-crawler
+  regex: ""
+  time:
+    hour: "11"
+    minute: 40
+
+- id: echelon_telnet_bruteforcer
+  name: Echelon telnet bruteforce
+  descr: Multiple telnet authentication attempts detected
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/telnet-bruteforcer
+  regex: ""
+  time:
+    hour: "11"
+    minute: 45
+
+- id: echelon_uri_parsing_exploit
+  name: Echelon URI parsing exploit
+  descr: Exploiting URI parsing vulnerabilities
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/uri-parsing-exploit
+  regex: ""
+  time:
+    hour: "11"
+    minute: 45
+
+- id: echelon_vnc_login_attempt
+  name: Echelon VNC login
+  descr: VNC remote desktop login attempt on port 5900/5901
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/vnc-login-attempt
+  regex: ""
+  time:
+    hour: "11"
+    minute: 45
+
+- id: echelon_web_command_injection
+  name: Echelon web command injection
+  descr: Attempting OS command injection via web parameters
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/web-commad-injection
+  regex: ""
+  time:
+    hour: "11"
+    minute: 50
+
+- id: echelon_web_crawler
+  name: Echelon web crawler
+  descr: HTTP web crawling activity detected on web honeypots
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/web-crawler
+  regex: ""
+  time:
+    hour: "11"
+    minute: 50
+
+- id: echelon_web_shell_hunt
+  name: Echelon web shell hunt
+  descr: Scanning for web shells (WSO, c99, r57, etc.)
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/web-shell-hunt
+  regex: ""
+  time:
+    hour: "11"
+    minute: 50
+
+- id: echelon_web_vulnerability_exploit
+  name: Echelon web vulnerability exploit
+  descr: Generic web application vulnerability exploit
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/web-vulnerability-exploit
+  regex: ""
+  time:
+    hour: "11"
+    minute: 55
+
+- id: echelon_wordpress_auth_bypass
+  name: Echelon WordPress auth bypass
+  descr: WordPress authentication bypass attempt
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/wordpress-auth-bypass
+  regex: ""
+  time:
+    hour: "11"
+    minute: 55
+
+- id: echelon_wordpress_enumeration
+  name: Echelon WordPress enumeration
+  descr: WordPress user and plugin enumeration
+  provider_link: https://echelonlabs.co/
+  url: https://echelonlabs.co/api/tag/block/wordpress-enumeration
+  regex: ""
+  time:
+    hour: "11"
+    minute: 55
+
 # AbuseIPDB blacklist is available to authorized users only, fill in the "Key" below with your API key and uncomment
 #- id: abuseipdb
 #  name: AbuseIPDB
