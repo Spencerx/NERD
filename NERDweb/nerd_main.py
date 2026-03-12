@@ -1235,7 +1235,7 @@ def create_threat_category_data_for_tags(category_records, min_confidence, max_s
                     values.sort(key=int)
                 else:
                     values.sort()
-                subcategories.append(f"{key}: {', '.join(values)}")
+                subcategories.append(f"{key}: {', '.join(str(val) for val in values)}")
             else:
                 subcategories.append(f"{key}: <i>many</i>")
         rows.append({
