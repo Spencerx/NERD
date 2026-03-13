@@ -115,6 +115,7 @@ groups:
       - 404_api_ip_not_found
       - 429_rate_limit_api
       - 429_rate_limit_web
+      - 500_internal_server_error
       - 503_db_error
       - 5xx_other
     # 5 min interval for Munin

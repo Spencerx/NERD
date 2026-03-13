@@ -21,6 +21,7 @@ from flask_wtf import FlaskForm
 from flask_mail import Mail, Message
 from wtforms import validators, StringField, TextAreaField, FloatField, IntegerField, BooleanField, HiddenField, SelectField, SelectMultipleField, PasswordField
 from werkzeug.datastructures import MultiDict
+from werkzeug.exceptions import InternalServerError
 import dateutil.parser
 import pymisp
 from pymisp import ExpandedPyMISP
@@ -532,6 +533,17 @@ def logout():
         del session['user']
         flash("You have been logged out", "info")
     return redirect(redir_path)
+
+
+# ***** Error handlers *****
+
+@app.errorhandler(InternalServerError)
+def handle_internal_error(e):
+    log_err.log('500_internal_server_error')
+    if request.path.startswith("/api"):
+        return Response(json.dumps({'err_n': 500, 'error': "Internal server error"}), 500, mimetype='application/json')
+    else:
+        return e
 
 
 # ***** Functions called for each request *****

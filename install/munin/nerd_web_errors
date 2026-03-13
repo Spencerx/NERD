@@ -14,6 +14,7 @@ graph_vlabel Number of events per 5 min
 404_api_ip_not_found.label 404_api_ip_not_found
 429_rate_limit_api.label 429_rate_limit_api
 429_rate_limit_web.label 429_rate_limit_web
+500_internal_server_error.label 500_internal_server_error
 503_db_error.label 503_db_error
 5xx_other.label 5xx_other
 EOF
